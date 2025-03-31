@@ -1,0 +1,29 @@
+name: Workflow-Übung
+on: 
+    push:
+        branches: 
+            - master
+    pull_request: 
+            branches: 
+             - master
+   
+
+jobs:
+      Github_Actions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: cloning repository
+              run: git clone https://github.com/hasib9669/angular-frontend.git
+            - name: "installing npm packages"
+              run: npm install
+            - name: "Build"
+              run: npm run build
+
+            - name: "Deploy"
+              run: echo "Build deployed"
+              
+            
+
+            
+
+
