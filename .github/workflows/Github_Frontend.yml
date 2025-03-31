@@ -15,9 +15,13 @@ jobs:
             - name: cloning repository
               run: git clone https://github.com/hasib9669/angular-frontend.git
             - name: "installing npm packages"
-              run: npm install
+              run: |
+                cd angular-frontend
+                npm install
             - name: "Build"
-              run: npm run build
+              run: |
+                cd angular-frontend
+                npm run build
 
             - name: "Deploy"
               run: echo "Build deployed"
