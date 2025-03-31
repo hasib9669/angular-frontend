@@ -21,7 +21,7 @@ jobs:
             - name: "Build"
               run: |
                 cd angular-frontend
-                npm run build
+                NODE_OPTIONS=--openssl-legacy-provider npm run build
 
             - name: "Deploy"
               run: echo "Build deployed"
